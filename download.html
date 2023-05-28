@@ -43,13 +43,11 @@
     s.parentNode.insertBefore(hm, s);
   })();
   </script>
-
-  </head>
+</head>
 
 <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+  <header id="header" class="fixed-top d-flex align-items-center">
     <div class="container d-flex justify-content-between align-items-center">
 
       <div class="logo">
@@ -60,9 +58,9 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="active " href="index.html">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="benchmark.html">Benchmark</a></li>
-          <li><a href="download.html">Download</a></li>
+          <li><a class="active" href="download.html">Download</a></li>
           <li><a href="terms_of_use.html">Terms of Use</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -71,87 +69,28 @@
     </div>
   </header><!-- End Header -->
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex justify-cntent-center align-items-center">
-    <div id="heroCarousel" class="container carousel carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
-
-      <!-- Slide 1 -->
-      <div class="carousel-item active">
-        <div class="carousel-container">
-          <h2 class="animate__animated animate__fadeInDown">Species Dataset</h2>
-          <p class="animate__animated animate__fadeInUp"></p>
-          <!-- <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a> -->
-        </div>
-      </div>
-
-      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
-      </a>
-
-      <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
-        <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
-      </a>
-
-    </div>
-  </section><!-- End Hero -->
-
   <main id="main">
-    <section class="about">
+    <section class="download">
       <div class="container">
-        <div class="section-title"><h1>About</h1></div>
-        <div class="row">
-          <div class="col-md-12 align-self-start" style="margin-bottom: 1em">The Species dataset is a large-scale dataset.</div>
-          <div class="col-md-12 align-self-center">
-            <ul style="list-style-type:circle">
-              <li>The dataset contains <strong>1 Million</strong> images</li>
-            </ul>
-          </div>
-        </div>
+        <div class="section-title"><h1>Downloads</h1></div>
+        <div>We maintain the data using Google Drive and Baidu Yunpan. It will be released as soon.
       </div>
     </section>
 
-    <section class="example">
+    <section class="data-orgainzation">
       <div class="container">
-        <div class="section-title"><h1>Examples</h1></div>
-        <div class="row"><img src="assets/img/example.png" style="margin: auto; width: 882px">
-        </div>
+        <div class="section-title"><h1>Data orgainization</h1></div>
+        <div>The whole dataset is split into 196 files, each contains around 5,000 image links. After unzip the file, files under the data root directory is like this</div>
+        <pre class="file-tree">data_root
+└─species_release
+    ├─ species_0.csv
+    ├─ species_1.csv
+    ├─ species_2.csv
+    ├─ ....
+    └─ species_195.csv</pre>
       </div>
     </section>
-
-    <section class="announcement">
-      <div class="container">
-        <div class="section-title"><h1>Announcement</h1></div>
-        <div class="row">
-          <div class="col-md-12">2023/05/28 <span class="announcement">The data will be released on <a href="https://species-dataset.github.io">link</a>.</div>
-        </div>
-      </div>
-    </section>
-
-    <section class="citation">
-      <div class="container">
-        <div class="section-title"><h1>Citation</h1></div>
-        <div><pre>@misc{xxx
-}</pre></div>
-      </div>
-    </section>
-
   </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-duration="500">
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>Huawei</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
