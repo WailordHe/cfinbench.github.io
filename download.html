@@ -70,25 +70,40 @@
   </header><!-- End Header -->
 
   <main id="main">
-    <section class="download">
+    <section id="download" class="download">
       <div class="container">
         <div class="section-title"><h1>Downloads</h1></div>
-        <div>We maintain the data using Google Drive and Baidu Yunpan. It will be released as soon.
-      </div>
-    </section>
+        <div>We maintain the data using Google Drive and Baidu Yunpan. </div>
+        <div>
+          Download link for Species196-L: <a href="https://drive.google.com/file/d/1dRGHx-H7z-XNbvm-ms-jgXpLCQ0NdxWz/view?usp=sharing" target="_blank" rel="noopener noreferrer">Google Drive</a>
+      </div>   
+      <div>
+        Download link for Species196-U: <a href="https://drive.google.com/file/d/1U5irS7lD_qXgaN3Txvi--o_u_dtJYC8U/view?usp=sharing" target="_blank" rel="noopener noreferrer">Google Drive</a>
+    </div>   
+     </section>
 
     <section class="data-orgainzation">
       <div class="container">
         <div class="section-title"><h1>Data orgainization</h1></div>
-        <div>The whole dataset is split into 196 files, each contains around 5,000 image links. After unzip the file, files under the data root directory is like this</div>
-        <pre class="file-tree">data_root
-└─species_release
-    ├─ species_0.csv
-    ├─ species_1.csv
-    ├─ species_2.csv
-    ├─ ....
-    └─ species_195.csv</pre>
-      </div>
+        <!DOCTYPE html>
+        <!DOCTYPE html>
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Species196-L and Species196-U Datasets</title>
+        </head>
+        <body>
+            <p>
+                For the <strong>Species196-L classification dataset</strong>, images will be downloaded and organized in the ImageNet style. For the <strong>Species196-L object detection dataset</strong>, images will be downloaded and organized into train and val subfolders following the COCO format.
+            </p>
+            <p>
+                For <strong>Species196-U</strong>, 4 separate JSON files for Insecta, Mollusca, Weeds, and Insects' other life cycles will be provided. We suggest using <a href="https://github.com/rom1504/img2dataset" target="_blank" rel="noopener noreferrer">img2dataset</a> to download these unlabeled images. Please note that image links might expire, so we've included some redundancy in the dataset.
+            </p>
+        </body>
+        </html>
+    </div>
     </section>
   </main><!-- End #main -->
 
