@@ -2027,3 +2027,7 @@ table tr.inactive{
 span.announcement{
   font-weight: bold;
 }
+
+.small-cross {
+  font-size: 12px;
+}
