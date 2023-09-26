@@ -97,200 +97,551 @@
       </style>
   </head>
   <body>
-    <main id="main">
-      <section class="benchmark">
-        <div class="container" style="border:1px solid #d0d7de; border-radius: 10px; padding: 100px;">
-          <div class="section-title">
-            <h1>Benchmark of Species196-L</h1>
-          </div>
-          <div>
-            <div class="col-md-12 sub-title">
-              The slash (/) in the table indicates that the values before the slash represent the accuracy when training the model from scratch, while the values after the slash represent the accuracy when Imagenet-1K pretrained weights are loaded.                    <span class="small-cross">&#x271D;</span> donates models pretrained with Imagenet-22K.            </div>
-            <table>
-              <thead>
-                <tr>
-                  <th>Model</th>
-                  <th>Resolution</th>
-                  <th># Params</th>
-                  <th># FLOPs</th>
-                  <th>Top-1 ACC</th>
-                  <th>Top-5 ACC</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                    <td>MobileViT-XS</td>
-                    <td>224x224</td>
-                    <td>2.3 M</td>
-                    <td>0.7 G</td>
-                    <td>64.11 / 78.55</td>
-                    <td>83.51 / 91.92</td>
-                </tr>
-                <tr>
-                    <td>GhostNet 1.0</td>
-                    <td>224x224</td>
-                    <td>5.2 M</td>
-                    <td>0.1 G</td>
-                    <td>62.75 / 76.02</td>
-                    <td>82.58 / 90.77</td>
-                </tr>
-                <tr>
-                    <td>EfficientNet-B0</td>
-                    <td>224x224</td>
-                    <td>5.3 M</td>
-                    <td>0.4 G</td>
-                    <td>62.88 / 78.26</td>
-                    <td>81.66 / 91.60</td>
-                </tr>
-                <tr>
-                    <td>MobileNetV3 Large 1.0</td>
-                    <td>224x224</td>
-                    <td>5.4 M</td>
-                    <td>0.2 G</td>
-                    <td>62.75 / 77.83</td>
-                    <td>81.46 / 90.77</td>
-                </tr>
-                <tr>
-                    <td>RegNetY-4GF</td>
-                    <td>224x224</td>
-                    <td>20.6 M</td>
-                    <td>4.0 G</td>
-                    <td>43.01 / 82.25</td>
-                    <td>69.02 / 93.71</td>
-                </tr>
-                <tr>
-                    <td>Deit-S</td>
-                    <td>224x224</td>
-                    <td>22 M</td>
-                    <td>4.6 G</td>
-                    <td>36.89 / 77.21</td>
-                    <td>56.79 / 91.52</td>
-                </tr>
-                <tr>
-                    <td>TNT-S</td>
-                    <td>224x224</td>
-                    <td>23.8 M</td>
-                    <td>5.2 G</td>
-                    <td>38.66 / 80.67</td>
-                    <td>59.14 / 93.17</td>
-                </tr>
-                <tr>
-                    <td>CMT-S</td>
-                    <td>224x224</td>
-                    <td>25.1 M</td>
-                    <td>4 G</td>
-                    <td>40.86 / 81.12</td>
-                    <td>60.10 / 93.32</td>
-                </tr>
-                <tr>
-                    <td>Resnet50</td>
-                    <td>224x224</td>
-                    <td>25.6 M</td>
-                    <td>4.1 G</td>
-                    <td>64.32 / 78.11</td>
-                    <td>81.70 / 91.91</td>
-                </tr>
-                <tr>
-                    <td>Swin-T</td>
-                    <td>224x224</td>
-                    <td>28 M</td>
-                    <td>4.5 G</td>
-                    <td>46.88 / 81.66</td>
-                    <td>68.57 / 93.52</td>
-                </tr>
-                <tr>
-                    <td>Convnext-T </td>
-                    <td>224x224</td>
-                    <td>29M</td>
-                    <td>4.5G</td>
-                    <td>46.36 / 78.94</td>
-                    <td>68.59 / 92.44</td>
-                </tr>
-                <tr>
-                    <td>MaxViT-T</td>
-                    <td>224x224</td>
-                    <td>31 M</td>
-                    <td>5.6 G</td>
-                    <td>52.19 / 83.35</td>
-                    <td>72.12 / 94.16</td>
-                </tr>
-                <tr>
-                    <td>MViTv2-B</td>
-                    <td>224x224</td>
-                    <td>52 M</td>
-                    <td>10.2 G</td>
-                    <td>46.22 / 83.79</td>
-                    <td>66.21 / 94.81</td>
-                </tr>
-                <tr>
-                    <td>Resnet200-D</td>
-                    <td>224x224</td>
-                    <td>65 M</td>
-                    <td>26 G</td>
-                    <td>51.35 / 82.11</td>
-                    <td>73.07 / 94.76</td>
-                </tr>
-                <tr>
-                    <td>VIT-B/32</td>
-                    <td>224x224</td>
-                    <td>86 M</td>
-                    <td>8.6 G</td>
-                    <td>32.59 / 74.68</td>
-                    <td>53.76 / 89.76</td>
-                </tr>
-                <tr>
-                    <td>Swin-B</td>
-                    <td>224x224</td>
-                    <td>88 M</td>
-                    <td>15.4 G</td>
-                    <td>48.72 / 82.88</td>
-                    <td>69.71 / 94.30</td>
-                </tr>
-                <tr>
-                  <td>
-                    MetaFormer-2
-                    <span class="small-cross">&#x271D;</span>
-                  </td>
-                  <td>224x224</td>
-                  <td>81 M</td>
-                  <td>-</td>
-                  <td>87.69</td>
-                  <td>-</td>
-                </tr>
-                <tr>
-                  <td>
-                    MetaFormer-2
-                    <span class="small-cross">&#x271D;</span>
-                  </td>
-                    <td>384x384</td>
-                    <td>81 M</td>
-                    <td>-</td>
-                    <td>88.69</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td>TransFG                    <span class="small-cross">&#x271D;</span></td>
-                    <td>224x224</td>
-                    <td>85.8 M</td>
-                    <td>-</td>
-                    <td>84.42</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td>IELT                    <span class="small-cross">&#x271D;</span></td>
-                    <td>448x448</td>
-                    <td>93.5 M</td>
-                    <td>-</td>
-                    <td>81.92</td>
-                    <td>-</td>
-                </tr>
-            </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-    </main>
-    <!-- End #main -->
+<main id="main">
+
+<section class="benchmark">
+
+<div class="container" style="border:1px solid #ddd;border-radius: 10px;padding: 20px;">
+
+<div class="section-title" style="margin-bottom: 20px;">
+<h1 style="font-size: 32px;font-weight: bold;text-align:center;">Benchmark of Species196-L</h1>
+</div>
+
+<h3>Supervised-learning Benchmark</h3>
+<p class="text-left">The slash (/) in the table indicates that the values before the slash represent the accuracy when training the model from scratch, while the values after the slash represent the accuracy when Imagenet-1K pretrained weights are loaded.<span class="small-cross">&#x271D;</span> donates models pretrained with Imagenet-22K.</p>
+
+
+<div style="overflow-x:auto;">
+<table style="width:100%;border-collapse:collapse;border:1px solid #ddd;font-size:14px;">
+<thead style="background-color:#f2f2f2;">
+<tr>
+<th style="padding:8px;border:1px solid #ddd;">Model</th>  
+<th style="padding:8px;border:1px solid #ddd;">Resolution</th>
+<th style="padding:8px;border:1px solid #ddd;"># Params</th>
+<th style="padding:8px;border:1px solid #ddd;"># FLOPs</th>
+<th style="padding:8px;border:1px solid #ddd;">Top-1 ACC</th>
+<th style="padding:8px;border:1px solid #ddd;">Top-5 ACC</th>
+<th style="padding:8px;border:1px solid #ddd;">F1-Macro</th>
+</tr>
+</thead>
+
+<tbody>
+
+<tr>
+<td style="padding:8px;border:1px solid #ddd;">MobileViT-XS</td>
+<td style="padding:8px;border:1px solid #ddd;">224x224</td>  
+<td style="padding:8px;border:1px solid #ddd;">2.3 M</td>
+<td style="padding:8px;border:1px solid #ddd;">0.7 G</td>
+<td style="padding:8px;border:1px solid #ddd;">64.11 / 78.55</td>
+<td style="padding:8px;border:1px solid #ddd;">83.51 / 91.92</td>
+<td style="padding:8px;border:1px solid #ddd;">53.52 / 69.01</td>
+</tr>
+<tr>
+  <td style="padding:8px;border:1px solid #ddd;">GhostNet 1.0</td>
+  <td style="padding:8px;border:1px solid #ddd;">224x224</td>
+  <td style="padding:8px;border:1px solid #ddd;">5.2 M</td>
+  <td style="padding:8px;border:1px solid #ddd;">0.1 G</td>
+  <td style="padding:8px;border:1px solid #ddd;">62.75 / 76.02</td>
+  <td style="padding:8px;border:1px solid #ddd;">82.58 / 90.77</td>
+  <td style="padding:8px;border:1px solid #ddd;">51.30 / 64.93</td>
+  </tr>
+<tr>
+    <td style="padding:8px;border:1px solid #ddd;">EfficientNet-B0</td>
+    <td style="padding:8px;border:1px solid #ddd;">224x224</td>
+    <td style="padding:8px;border:1px solid #ddd;">5.3 M</td>
+    <td style="padding:8px;border:1px solid #ddd;">0.4 G</td>
+    <td style="padding:8px;border:1px solid #ddd;">62.88 / 78.26</td>
+    <td style="padding:8px;border:1px solid #ddd;">81.66 / 91.60</td>
+    <td style="padding:8px;border:1px solid #ddd;">53.13 / 66.91</td>
+
+    </tr>
+<tr>
+    <td style="padding:8px;border:1px solid #ddd;">MobileNetV3 Large 1.0</td>
+    <td style="padding:8px;border:1px solid #ddd;">224x224</td>
+    <td style="padding:8px;border:1px solid #ddd;">5.4 M</td>
+    <td style="padding:8px;border:1px solid #ddd;">0.2 G</td>  
+    <td style="padding:8px;border:1px solid #ddd;">62.75 / 77.83</td>
+    <td style="padding:8px;border:1px solid #ddd;">81.46 / 90.77</td>
+    <td style="padding:8px;border:1px solid #ddd;">49.99 / 66.50</td>
+
+    </tr>
+<tr>
+  <td style="padding:8px;border:1px solid #ddd;">RegNetY-4GF</td>
+  <td style="padding:8px;border:1px solid #ddd;">224x224</td>
+  <td style="padding:8px;border:1px solid #ddd;">20.6 M</td>
+  <td style="padding:8px;border:1px solid #ddd;">4.0 G</td>
+  <td style="padding:8px;border:1px solid #ddd;">43.01 / 82.25</td>
+  <td style="padding:8px;border:1px solid #ddd;">69.02 / 93.71</td>
+  <td style="padding:8px;border:1px solid #ddd;">28.99 / 71.24</td>
+
+  </tr>
+      
+<tr>
+  <td style="padding:8px;border:1px solid #ddd;">Deit-S</td>
+  <td style="padding:8px;border:1px solid #ddd;">224x224</td>
+  <td style="padding:8px;border:1px solid #ddd;">22 M</td>
+  <td style="padding:8px;border:1px solid #ddd;">4.6 G</td>
+  <td style="padding:8px;border:1px solid #ddd;">36.89 / 77.21</td>
+  <td style="padding:8px;border:1px solid #ddd;">56.79 / 91.52</td>
+  <td style="padding:8px;border:1px solid #ddd;">29.35 / 65.25</td>
+
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ddd;">TNT-S</td>
+    <td style="padding:8px;border:1px solid #ddd;">224x224</td>
+    <td style="padding:8px;border:1px solid #ddd;">23.8 M</td>
+    <td style="padding:8px;border:1px solid #ddd;">5.2 G</td>
+    <td style="padding:8px;border:1px solid #ddd;">38.66 / 80.67</td>
+    <td style="padding:8px;border:1px solid #ddd;">59.14 / 93.17</td>
+    <td style="padding:8px;border:1px solid #ddd;">30.67 / 69.34</td>
+
+    </tr>
+    
+    <tr>  
+    <td style="padding:8px;border:1px solid #ddd;">CMT-S</td>
+    <td style="padding:8px;border:1px solid #ddd;">224x224</td>
+    <td style="padding:8px;border:1px solid #ddd;">25.1 M</td>
+    <td style="padding:8px;border:1px solid #ddd;">4 G</td>
+    <td style="padding:8px;border:1px solid #ddd;">40.86 / 81.12</td>
+    <td style="padding:8px;border:1px solid #ddd;">60.10 / 93.32</td>
+    <td style="padding:8px;border:1px solid #ddd;">33.25 / 70.40</td>
+
+    </tr>
+    
+    <tr>
+    <td style="padding:8px;border:1px solid #ddd;">Resnet50</td>
+    <td style="padding:8px;border:1px solid #ddd;">224x224</td>
+    <td style="padding:8px;border:1px solid #ddd;">25.6 M</td>
+    <td style="padding:8px;border:1px solid #ddd;">4.1 G</td>
+    <td style="padding:8px;border:1px solid #ddd;">64.32 / 78.11</td>
+    <td style="padding:8px;border:1px solid #ddd;">81.70 / 91.91</td>
+    <td style="padding:8px;border:1px solid #ddd;">53.31 / 67.29</td>
+
+    </tr>
+    <tr>
+      <td style="padding:8px;border:1px solid #ddd;">Swin-T</td>
+      <td style="padding:8px;border:1px solid #ddd;">224x224</td>
+      <td style="padding:8px;border:1px solid #ddd;">28 M</td>
+      <td style="padding:8px;border:1px solid #ddd;">4.5 G</td>
+      <td style="padding:8px;border:1px solid #ddd;">46.88 / 81.66</td>
+      <td style="padding:8px;border:1px solid #ddd;">68.57 / 93.52</td>
+      <td style="padding:8px;border:1px solid #ddd;">37.30 / 71.20</td>
+
+      </tr>
+      
+      <tr>
+      <td style="padding:8px;border:1px solid #ddd;">Convnext-T</td>
+      <td style="padding:8px;border:1px solid #ddd;">224x224</td>
+      <td style="padding:8px;border:1px solid #ddd;">29M</td>
+      <td style="padding:8px;border:1px solid #ddd;">4.5G</td>
+      <td style="padding:8px;border:1px solid #ddd;">46.36 / 78.94</td>
+      <td style="padding:8px;border:1px solid #ddd;">68.59 / 92.44</td>
+      <td style="padding:8px;border:1px solid #ddd;">37.16 / 70.43</td>
+
+      </tr>
+      
+      <tr>
+      <td style="padding:8px;border:1px solid #ddd;">MaxViT-T</td>
+      <td style="padding:8px;border:1px solid #ddd;">224x224</td>
+      <td style="padding:8px;border:1px solid #ddd;">31 M</td>
+      <td style="padding:8px;border:1px solid #ddd;">5.6 G</td>
+      <td style="padding:8px;border:1px solid #ddd;">52.19 / 83.35</td>
+      <td style="padding:8px;border:1px solid #ddd;">72.12 / 94.16</td>
+      <td style="padding:8px;border:1px solid #ddd;">42.40 / 62.56</td>
+
+      </tr>
+      <tr>
+        <td style="padding:8px;border:1px solid #ddd;">MViTv2-B</td>
+        <td style="padding:8px;border:1px solid #ddd;">224x224</td>
+        <td style="padding:8px;border:1px solid #ddd;">52 M</td>
+        <td style="padding:8px;border:1px solid #ddd;">10.2 G</td>
+        <td style="padding:8px;border:1px solid #ddd;">46.22 / 83.79</td>
+        <td style="padding:8px;border:1px solid #ddd;">66.21 / 94.81</td>
+        <td style="padding:8px;border:1px solid #ddd;">35.83 / 72.94</td>
+
+        </tr>
+        
+        <tr>
+        <td style="padding:8px;border:1px solid #ddd;">Resnet200-D</td>
+        <td style="padding:8px;border:1px solid #ddd;">224x224</td>
+        <td style="padding:8px;border:1px solid #ddd;">65 M</td>
+        <td style="padding:8px;border:1px solid #ddd;">26 G</td>
+        <td style="padding:8px;border:1px solid #ddd;">51.35 / 82.11</td>
+        <td style="padding:8px;border:1px solid #ddd;">73.07 / 94.76</td>
+        <td style="padding:8px;border:1px solid #ddd;">37.70 / 70.61</td>
+
+        </tr>
+        
+        <tr>
+        <td style="padding:8px;border:1px solid #ddd;">VIT-B/32</td>
+        <td style="padding:8px;border:1px solid #ddd;">224x224</td>
+        <td style="padding:8px;border:1px solid #ddd;">86 M</td>
+        <td style="padding:8px;border:1px solid #ddd;">8.6 G</td>
+        <td style="padding:8px;border:1px solid #ddd;">32.59 / 74.68</td>
+        <td style="padding:8px;border:1px solid #ddd;">53.76 / 89.76</td> 
+        <td style="padding:8px;border:1px solid #ddd;">25.20 / 63.38</td>
+
+        </tr>
+        
+        <tr>
+        <td style="padding:8px;border:1px solid #ddd;">Swin-B</td>
+        <td style="padding:8px;border:1px solid #ddd;">224x224</td>
+        <td style="padding:8px;border:1px solid #ddd;">88 M</td>
+        <td style="padding:8px;border:1px solid #ddd;">15.4 G</td>
+        <td style="padding:8px;border:1px solid #ddd;">48.72 / 82.88</td>
+        <td style="padding:8px;border:1px solid #ddd;">69.71 / 94.30</td>
+        <td style="padding:8px;border:1px solid #ddd;">39.28 / 72.04</td>
+
+        </tr>
+        <td style="padding:8px;border:1px solid #ddd;">
+          MetaFormer-2
+          <span class="small-cross">&#x271D;</span>  
+        </td>
+        <td style="padding:8px;border:1px solid #ddd;">384x384</td>
+        <td style="padding:8px;border:1px solid #ddd;">81 M</td>
+        <td style="padding:8px;border:1px solid #ddd;">-</td>
+        <td style="padding:8px;border:1px solid #ddd;">88.69</td>
+        <td style="padding:8px;border:1px solid #ddd;">-</td>
+        </tr>
+        
+        <tr>
+        <td style="padding:8px;border:1px solid #ddd;">TransFG <span class="small-cross">&#x271D;</span></td>
+        <td style="padding:8px;border:1px solid #ddd;">224x224</td>
+        <td style="padding:8px;border:1px solid #ddd;">85.8 M</td> 
+        <td style="padding:8px;border:1px solid #ddd;">-</td>
+        <td style="padding:8px;border:1px solid #ddd;">84.42</td>
+        <td style="padding:8px;border:1px solid #ddd;">-</td>
+        </tr>
+        
+        <tr>
+        <td style="padding:8px;border:1px solid #ddd;">IELT <span class="small-cross">&#x271D;</span></td>
+        <td style="padding:8px;border:1px solid #ddd;">448x448</td>
+        <td style="padding:8px;border:1px solid #ddd;">93.5 M</td>
+        <td style="padding:8px;border:1px solid #ddd;">-</td>
+        <td style="padding:8px;border:1px solid #ddd;">81.92</td> 
+        <td style="padding:8px;border:1px solid #ddd;">-</td>
+        </tr>
+
+</tbody>
+
+</table>
+
+<p>&nbsp;</p>
+
+
+<h3>Multimodal Large Models Benchmark</h3>
+<h4>Leaderboard of true or false questions of Species-L multimodal benchmark.</h4>
+<table>
+
+  <thead>
+  <tr>
+  <th>Models</th>  
+  <th>Phylum ACC(%)</th>
+  <th>Phylum ACC+(%)</th>  
+  <th>Class ACC(%)</th>
+  <th>Class ACC+(%)</th>
+  <th>Order ACC(%)</th>
+  <th>Order ACC+(%)</th>
+  <th>Family ACC(%)</th>
+  <th>Family ACC+(%)</th>
+  <th>Genus ACC(%)</th>
+  <th>Genus ACC+(%)</th>
+  <th>Species ACC(%)</th>
+  <th>Species ACC+(%)</th>
+  <th>Avg ACC(%)</th>
+  <th>Avg ACC+(%)</th>
+  </tr>
+  </thead>
+  
+  <tbody>
+  
+  <tr>
+  <td style="padding:8px;border:1px solid #ddd;">InstructBLIP</td>
+  <td style="padding:8px;border:1px solid #ddd;">59.0</td> 
+  <td style="padding:8px;border:1px solid #ddd;">19.2</td>
+  <td style="padding:8px;border:1px solid #ddd;">64.9</td>
+  <td style="padding:8px;border:1px solid #ddd;">31.0</td>
+  <td style="padding:8px;border:1px solid #ddd;">60.5</td>
+  <td style="padding:8px;border:1px solid #ddd;">24.1</td>
+  <td style="padding:8px;border:1px solid #ddd;">54.3</td>
+  <td style="padding:8px;border:1px solid #ddd;">12.2</td>
+  <td style="padding:8px;border:1px solid #ddd;">47.7</td>
+  <td style="padding:8px;border:1px solid #ddd;">15.5</td>  
+  <td style="padding:8px;border:1px solid #ddd;">50.25</td>
+  <td style="padding:8px;border:1px solid #ddd;">17.0</td>
+  <td style="padding:8px;border:1px solid #ddd;">56.1</td>
+  <td style="padding:8px;border:1px solid #ddd;">19.8</td>
+  </tr>
+  
+  <tr>
+  <td style="padding:8px;border:1px solid #ddd;">LLaVA</td>
+  <td style="padding:8px;border:1px solid #ddd;">50.0</td>
+  <td style="padding:8px;border:1px solid #ddd;">0.0</td>
+  <td style="padding:8px;border:1px solid #ddd;">50</td>
+  <td style="padding:8px;border:1px solid #ddd;">0.0</td>
+  <td style="padding:8px;border:1px solid #ddd;">50.0</td>
+  <td style="padding:8px;border:1px solid #ddd;">0.1</td>
+  <td style="padding:8px;border:1px solid #ddd;">50.1</td>  
+  <td style="padding:8px;border:1px solid #ddd;">0.3</td>
+  <td style="padding:8px;border:1px solid #ddd;">50.5</td>
+  <td style="padding:8px;border:1px solid #ddd;">6.2</td>
+  <td style="padding:8px;border:1px solid #ddd;">53.8</td>
+  <td style="padding:8px;border:1px solid #ddd;">12.1</td>
+  <td style="padding:8px;border:1px solid #ddd;">50.7</td>
+  <td style="padding:8px;border:1px solid #ddd;">3.1</td>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ddd;">PandaGPT</td>
+    <td style="padding:8px;border:1px solid #ddd;">50.2</td>
+    <td style="padding:8px;border:1px solid #ddd;">0.4</td>
+    <td style="padding:8px;border:1px solid #ddd;">51.6</td>
+    <td style="padding:8px;border:1px solid #ddd;">3.2</td>
+    <td style="padding:8px;border:1px solid #ddd;">50.0</td>
+    <td style="padding:8px;border:1px solid #ddd;">0.0</td>
+    <td style="padding:8px;border:1px solid #ddd;">50.2</td>
+    <td style="padding:8px;border:1px solid #ddd;">0.4</td>
+    <td style="padding:8px;border:1px solid #ddd;">50.2</td>
+    <td style="padding:8px;border:1px solid #ddd;">0.4</td>
+    <td style="padding:8px;border:1px solid #ddd;">50.0</td>
+    <td style="padding:8px;border:1px solid #ddd;">0.3</td>
+    <td style="padding:8px;border:1px solid #ddd;">50.4</td>
+    <td style="padding:8px;border:1px solid #ddd;">0.8</td>  
+  </tr>
+  
+  <tr>
+  <td style="padding:8px;border:1px solid #ddd;">mPLUG-Owl</td>
+  <td style="padding:8px;border:1px solid #ddd;">52.7</td>
+  <td style="padding:8px;border:1px solid #ddd;">11.6</td>
+  <td style="padding:8px;border:1px solid #ddd;">52.8</td>
+  <td style="padding:8px;border:1px solid #ddd;">12.6</td>
+  <td style="padding:8px;border:1px solid #ddd;">48.6</td>
+  <td style="padding:8px;border:1px solid #ddd;">7.5</td>
+  <td style="padding:8px;border:1px solid #ddd;">50.0</td>
+  <td style="padding:8px;border:1px solid #ddd;">9.1</td>
+  <td style="padding:8px;border:1px solid #ddd;">47.8</td>
+  <td style="padding:8px;border:1px solid #ddd;">11.5</td>
+  <td style="padding:8px;border:1px solid #ddd;">45.4</td>
+  <td style="padding:8px;border:1px solid #ddd;">10.3</td>
+  <td style="padding:8px;border:1px solid #ddd;">49.6</td>
+  <td style="padding:8px;border:1px solid #ddd;">10.4</td>
+  </tr>
+  
+  <tr>
+  <td style="padding:8px;border:1px solid #ddd;">Visual-GLM6B</td>
+  <td style="padding:8px;border:1px solid #ddd;">47.4</td> 
+  <td style="padding:8px;border:1px solid #ddd;">5.1</td>
+  <td style="padding:8px;border:1px solid #ddd;">45.7</td>
+  <td style="padding:8px;border:1px solid #ddd;">2.8</td>
+  <td style="padding:8px;border:1px solid #ddd;">46.8</td>
+  <td style="padding:8px;border:1px solid #ddd;">5.7</td>
+  <td style="padding:8px;border:1px solid #ddd;">48.5</td>
+  <td style="padding:8px;border:1px solid #ddd;">6.5</td>
+  <td style="padding:8px;border:1px solid #ddd;">48.2</td>
+  <td style="padding:8px;border:1px solid #ddd;">7.0</td>
+  <td style="padding:8px;border:1px solid #ddd;">47.3</td>  
+  <td style="padding:8px;border:1px solid #ddd;">5.0</td>
+  <td style="padding:8px;border:1px solid #ddd;">47.3</td>
+  <td style="padding:8px;border:1px solid #ddd;">5.4</td>
+  </tr>
+  
+  <tr>
+  <td style="padding:8px;border:1px solid #ddd;">Otter</td>
+  <td style="padding:8px;border:1px solid #ddd;">48.5</td>
+  <td style="padding:8px;border:1px solid #ddd;">0.0</td>
+  <td style="padding:8px;border:1px solid #ddd;">49.4</td> 
+  <td style="padding:8px;border:1px solid #ddd;">0.0</td>
+  <td style="padding:8px;border:1px solid #ddd;">48.3</td>
+  <td style="padding:8px;border:1px solid #ddd;">0.0</td>  
+  <td style="padding:8px;border:1px solid #ddd;">49.0</td>
+  <td style="padding:8px;border:1px solid #ddd;">0.6</td>
+  <td style="padding:8px;border:1px solid #ddd;">43.3</td>
+  <td style="padding:8px;border:1px solid #ddd;">0.1</td>
+  <td style="padding:8px;border:1px solid #ddd;">40.6</td>
+  <td style="padding:8px;border:1px solid #ddd;">1.9</td>
+  <td style="padding:8px;border:1px solid #ddd;">46.5</td>
+  <td style="padding:8px;border:1px solid #ddd;">0.4</td>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ddd;">Multimodal-GPT</td>  
+    <td style="padding:8px;border:1px solid #ddd;">39.4</td>
+    <td style="padding:8px;border:1px solid #ddd;">9.1</td>
+    <td style="padding:8px;border:1px solid #ddd;">38</td>
+    <td style="padding:8px;border:1px solid #ddd;">9.7</td>
+    <td style="padding:8px;border:1px solid #ddd;">32.7</td>
+    <td style="padding:8px;border:1px solid #ddd;">8.1</td>
+    <td style="padding:8px;border:1px solid #ddd;">34.0</td>
+    <td style="padding:8px;border:1px solid #ddd;">9.5</td>
+    <td style="padding:8px;border:1px solid #ddd;">35.1</td>
+    <td style="padding:8px;border:1px solid #ddd;">9.3</td>
+    <td style="padding:8px;border:1px solid #ddd;">39.2</td>
+    <td style="padding:8px;border:1px solid #ddd;">15.0</td>  
+    <td style="padding:8px;border:1px solid #ddd;">36.4</td>
+    <td style="padding:8px;border:1px solid #ddd;">10.1</td>
+    </tr>
+    
+    <tr>
+    <td style="padding:8px;border:1px solid #ddd;">MiniGPT4</td>
+    <td style="padding:8px;border:1px solid #ddd;">22.4</td>
+    <td style="padding:8px;border:1px solid #ddd;">7.7</td>
+    <td style="padding:8px;border:1px solid #ddd;">23.4</td>
+    <td style="padding:8px;border:1px solid #ddd;">7.0</td>
+    <td style="padding:8px;border:1px solid #ddd;">24.1</td> 
+    <td style="padding:8px;border:1px solid #ddd;">7.1</td>
+    <td style="padding:8px;border:1px solid #ddd;">23.5</td>
+    <td style="padding:8px;border:1px solid #ddd;">8.0</td>
+    <td style="padding:8px;border:1px solid #ddd;">20.2</td>
+    <td style="padding:8px;border:1px solid #ddd;">6.3</td>
+    <td style="padding:8px;border:1px solid #ddd;">22.5</td>
+    <td style="padding:8px;border:1px solid #ddd;">8.4</td>
+    <td style="padding:8px;border:1px solid #ddd;">22.7</td>
+    <td style="padding:8px;border:1px solid #ddd;">7.4</td>
+    </tr>
+    
+    <tr>
+    <td style="padding:8px;border:1px solid #ddd;">Blip2</td>
+    <td style="padding:8px;border:1px solid #ddd;">0.0</td>  
+    <td style="padding:8px;border:1px solid #ddd;">0.0</td>
+    <td style="padding:8px;border:1px solid #ddd;">0.0</td>
+    <td style="padding:8px;border:1px solid #ddd;">0.0</td>
+    <td style="padding:8px;border:1px solid #ddd;">0.0</td>
+    <td style="padding:8px;border:1px solid #ddd;">0.0</td>
+    <td style="padding:8px;border:1px solid #ddd;">0.0</td>
+    <td style="padding:8px;border:1px solid #ddd;">0.0</td>
+    <td style="padding:8px;border:1px solid #ddd;">0.0</td>
+    <td style="padding:8px;border:1px solid #ddd;">0.0</td>  
+    <td style="padding:8px;border:1px solid #ddd;">0.0</td>
+    <td style="padding:8px;border:1px solid #ddd;">0.0</td>
+    <td style="padding:8px;border:1px solid #ddd;">0.0</td>
+    <td style="padding:8px;border:1px solid #ddd;">0.0</td>
+    </tr>
+  
+  </tbody>
+  
+  </table>
+
+<p>&nbsp;</p>
+<h4>Leaderboard of multiple choice questions of Species-L multimodal benchmark.</h4>
+<table>
+
+  <thead>
+  <tr>
+  <th>Models</th>
+  <th>Phylum</th>
+  <th>Class</th> 
+  <th>Order</th>
+  <th>Family</th>
+  <th>Genus</th>
+  <th>Species</th>
+  <th>Avg Acc</th>
+  </tr>
+  </thead>
+  
+  <tbody>
+  
+  <tr>
+  <td style="padding:8px;border:1px solid #ddd;">Multimodal-GPT</td>
+  <td style="padding:8px;border:1px solid #ddd;">51.8</td>
+  <td style="padding:8px;border:1px solid #ddd;">71.6</td>
+  <td style="padding:8px;border:1px solid #ddd;">60.6</td>
+  <td style="padding:8px;border:1px solid #ddd;">56.6</td>
+  <td style="padding:8px;border:1px solid #ddd;">57.9</td>
+  <td style="padding:8px;border:1px solid #ddd;">63.2</td>
+  <td style="padding:8px;border:1px solid #ddd;">60.3</td>
+  </tr>
+  
+  <tr>  
+  <td style="padding:8px;border:1px solid #ddd;">InstructBLIP</td>
+  <td style="padding:8px;border:1px solid #ddd;">47.8</td>
+  <td style="padding:8px;border:1px solid #ddd;">58.7</td>
+  <td style="padding:8px;border:1px solid #ddd;">56.3</td>
+  <td style="padding:8px;border:1px solid #ddd;">57.5</td>
+  <td style="padding:8px;border:1px solid #ddd;">45.3</td>
+  <td style="padding:8px;border:1px solid #ddd;">39.8</td>
+  <td style="padding:8px;border:1px solid #ddd;">50.9</td>
+  </tr>
+  
+  <tr>
+  <td style="padding:8px;border:1px solid #ddd;">PandaGPT</td>  
+  <td style="padding:8px;border:1px solid #ddd;">53.0</td>
+  <td style="padding:8px;border:1px solid #ddd;">44.1</td>
+  <td style="padding:8px;border:1px solid #ddd;">42.6</td>
+  <td style="padding:8px;border:1px solid #ddd;">52.8</td>
+  <td style="padding:8px;border:1px solid #ddd;">38.6</td>
+  <td style="padding:8px;border:1px solid #ddd;">34.6</td>
+  <td style="padding:8px;border:1px solid #ddd;">44.3</td>
+  </tr>
+  <tr>
+    <td style="padding:8px;border:1px solid #ddd;">mPLUG-Owl</td>
+    <td style="padding:8px;border:1px solid #ddd;">34.1</td>
+    <td style="padding:8px;border:1px solid #ddd;">32.1</td>
+    <td style="padding:8px;border:1px solid #ddd;">43.0</td>
+    <td style="padding:8px;border:1px solid #ddd;">39.2</td>
+    <td style="padding:8px;border:1px solid #ddd;">31.0</td>
+    <td style="padding:8px;border:1px solid #ddd;">24.9</td>
+    <td style="padding:8px;border:1px solid #ddd;">34.1</td>
+    </tr>
+    
+    <tr>
+    <td style="padding:8px;border:1px solid #ddd;">MiniGPT4</td>
+    <td style="padding:8px;border:1px solid #ddd;">28.6</td> 
+    <td style="padding:8px;border:1px solid #ddd;">32.7</td>
+    <td style="padding:8px;border:1px solid #ddd;">32.1</td>
+    <td style="padding:8px;border:1px solid #ddd;">28.2</td>
+    <td style="padding:8px;border:1px solid #ddd;">29.9</td>
+    <td style="padding:8px;border:1px solid #ddd;">32.7</td>
+    <td style="padding:8px;border:1px solid #ddd;">30.7</td>
+    </tr>
+    
+    <tr>
+    <td style="padding:8px;border:1px solid #ddd;">LLaVA</td>
+    <td style="padding:8px;border:1px solid #ddd;">38.1</td>
+    <td style="padding:8px;border:1px solid #ddd;">34.2</td>
+    <td style="padding:8px;border:1px solid #ddd;">17.3</td>
+    <td style="padding:8px;border:1px solid #ddd;">33.4</td>  
+    <td style="padding:8px;border:1px solid #ddd;">22.2</td>
+    <td style="padding:8px;border:1px solid #ddd;">23.4</td>
+    <td style="padding:8px;border:1px solid #ddd;">28.1</td>
+    </tr>
+    
+    <tr>
+    <td style="padding:8px;border:1px solid #ddd;">Blip2</td>
+    <td style="padding:8px;border:1px solid #ddd;">26.7</td>
+    <td style="padding:8px;border:1px solid #ddd;">30.3</td>
+    <td style="padding:8px;border:1px solid #ddd;">23.3</td>  
+    <td style="padding:8px;border:1px solid #ddd;">27.9</td>
+    <td style="padding:8px;border:1px solid #ddd;">23.9</td>
+    <td style="padding:8px;border:1px solid #ddd;">24.5</td>
+    <td style="padding:8px;border:1px solid #ddd;">26.1</td>
+    </tr>
+    
+    <tr>
+    <td style="padding:8px;border:1px solid #ddd;">Visual-GLM6B</td>
+    <td style="padding:8px;border:1px solid #ddd;">23.0</td>
+    <td style="padding:8px;border:1px solid #ddd;">12.2</td>
+    <td style="padding:8px;border:1px solid #ddd;">13.9</td>
+    <td style="padding:8px;border:1px solid #ddd;">30.5</td>
+    <td style="padding:8px;border:1px solid #ddd;">15.7</td>  
+    <td style="padding:8px;border:1px solid #ddd;">11.6</td>
+    <td style="padding:8px;border:1px solid #ddd;">17.8</td>
+    </tr>
+    
+    <tr>
+    <td style="padding:8px;border:1px solid #ddd;">Otter</td>
+    <td style="padding:8px;border:1px solid #ddd;">0.0</td>
+    <td style="padding:8px;border:1px solid #ddd;">6.8</td>
+    <td style="padding:8px;border:1px solid #ddd;">20.8</td>
+    <td style="padding:8px;border:1px solid #ddd;">8.3</td>
+    <td style="padding:8px;border:1px solid #ddd;">6.7</td>
+    <td style="padding:8px;border:1px solid #ddd;">0.3</td>
+    <td style="padding:8px;border:1px solid #ddd;">7.15</td>
+    </tr> 
+
+  
+  </tbody>
+  
+  </table>
+</section>
+  
   </body>
   </html>
 
