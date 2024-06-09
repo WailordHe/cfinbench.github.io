@@ -1,3 +1,3 @@
-This is the Species Dataset https://species-dataset.github.io/index.html.
+This is the Dataset
 
-Credit to https://wukong-dataset.github.io/wukong-dataset/ and https://pixabay.com/zh/users/gdj-1086657/
+Credit to https://wukong-dataset.github.io/wukong-dataset/ 
